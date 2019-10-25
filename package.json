@@ -1,0 +1,26 @@
+{
+  "name": "rdr2-collector-map",
+  "version": "0.1.0",
+  "description": "Collector map for Red Dead Redemption 2 Online",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --env=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Palmer <mspalmer91@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
