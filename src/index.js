@@ -1,1 +1,5 @@
-console.log('ay');
+import createMap from './create-map';
+
+document.addEventListener('DOMContentLoaded', () => {
+	createMap();
+});
