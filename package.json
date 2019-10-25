@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development concurrently 'npm run js:watch' 'npm run sass:watch'",
-    "build": "NODE_ENV=production npm run clean && concurrently 'npm run js' 'npm run sass' && npm run copy",
+		"build": "NODE_ENV=production npm run clean && concurrently 'npm run js' 'npm run sass' && npm run copy",
+		"ghpublish": "cp -R dist/* .",
     "js": "webpack --env=production",
     "js:watch": "webpack-dev-server --env=development",
     "sass": "node-sass src/styles/styles.scss -o public",
