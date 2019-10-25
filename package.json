@@ -14,7 +14,8 @@
   "dependencies": {
     "leaflet": "^1.5.1",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-leaflet": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
