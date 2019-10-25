@@ -22,4 +22,6 @@ yarn-error.log*
 *.sw*
 
 # Project specific
+/public/**/*.map
 /public/styles.css
+/public/main.js
