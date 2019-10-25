@@ -20,6 +20,7 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
+    "@emotion/babel-preset-css-prop": "^10.0.22",
     "@emotion/core": "^10.0.22",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",

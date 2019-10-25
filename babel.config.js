@@ -5,9 +5,8 @@ module.exports = function babelConfig(api) {
 	return {
 		presets: [
 			'@babel/preset-react',
+			'@emotion/babel-preset-css-prop',
 			['@babel/preset-env', { modules: false }],
 		],
-		plugins: ['babel-plugin-emotion'],
-
 	};
 };
