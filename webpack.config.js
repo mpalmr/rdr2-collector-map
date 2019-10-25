@@ -2,11 +2,14 @@
 
 const path = require('path');
 const merge = require('webpack-merge');
-const Html = require('html-webpack-plugin');
 
 const base = {
 	context: path.resolve('src'),
 	entry: './index.js',
+	output: {
+		path: path.resolve('dist'),
+		filename: 'main.js',
+	},
 	module: {
 		strictExportPresence: true,
 		rules: [{
@@ -18,12 +21,6 @@ const base = {
 			}],
 		}],
 	},
-	plugins: [
-		new Html({
-			inject: true,
-			template: path.resolve('public/index.html'),
-		}),
-	],
 };
 
 const environments = {
