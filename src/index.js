@@ -1,5 +1,7 @@
-import createMap from './create-map';
+import initializeMap from './map';
+import initializeAsideMenu from './aside';
 
 document.addEventListener('DOMContentLoaded', () => {
-	createMap();
+	initializeMap();
+	initializeAsideMenu();
 });

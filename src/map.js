@@ -1,6 +1,6 @@
 import L from 'leaflet';
 
-export default function createMap() {
+export default function initializeMap() {
 	const map = L.map('map', {
 		preferCanvas: true,
 		minZoom: 2,

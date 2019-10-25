@@ -1,4 +1,10 @@
-@import "../../node_modules/leaflet/dist/leaflet";
+// Vendor
+@import '../../node_modules/leaflet/dist/leaflet';
 
-@import "base";
-@import "map";
+// Modules
+@import 'modules/breakpoints';
+
+// Partials
+@import 'base';
+@import 'map';
+@import 'aside';
