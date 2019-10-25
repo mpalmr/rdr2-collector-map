@@ -7,7 +7,7 @@ const base = {
 	context: path.resolve('src'),
 	entry: './index.js',
 	output: {
-		path: path.resolve('dist'),
+		path: path.resolve('public'),
 		filename: 'main.js',
 	},
 	module: {
@@ -24,8 +24,18 @@ const base = {
 };
 
 const environments = {
-	development: { mode: 'development' },
-	production: { mode: 'production' },
+	development: {
+		mode: 'development',
+		devtool: 'eval-source-map',
+		devServer: {
+			contentBase: path.resolve('public'),
+		},
+	},
+
+	production: {
+		mode: 'production',
+		devtool: 'source-map',
+	},
 };
 
 module.exports = function webpackConfig(env) {

@@ -6,16 +6,19 @@
   "author": "Matthew Palmer <mspalmer91@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development concurrently 'npm run js:watch' 'npm run sass:watch'",
-		"build": "NODE_ENV=production npm run clean && concurrently 'npm run js' 'npm run sass' && npm run copy",
-		"ghpublish": "cp -R dist/* .",
+    "dev": "NODE_ENV=development npm run clean && concurrently 'npm run js:watch' 'npm run sass:watch'",
+    "build": "NODE_ENV=production npm run clean && concurrently 'npm run js' 'npm run sass' && npm run copy",
+    "ghpublish": "cp -R dist/* .",
     "js": "webpack --env=production",
     "js:watch": "webpack-dev-server --env=development",
     "sass": "node-sass src/styles/styles.scss -o public",
     "sass:watch": "npm run sass && npm run sass -- -rw",
-    "clean": "rm -rf dist public/styles.css",
+    "clean": "rm -rf public/main.js public/styles.css",
     "copy": "cp -R public/* dist",
     "test": "jest"
+  },
+  "dependencies": {
+    "leaflet": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
