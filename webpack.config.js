@@ -11,6 +11,7 @@ const base = {
 	context: path.resolve('src'),
 	entry: [
 		'leaflet/dist/leaflet.css',
+		'./base.css',
 		'./index.jsx',
 	],
 	resolve: { extensions: ['.jsx', '.js', '.json'] },
