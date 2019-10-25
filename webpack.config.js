@@ -9,7 +9,10 @@ const Copy = require('copy-webpack-plugin');
 
 const base = {
 	context: path.resolve('src'),
-	entry: './index.jsx',
+	entry: [
+		'leaflet/dist/leaflet.css',
+		'./index.jsx',
+	],
 	resolve: { extensions: ['.jsx', '.js', '.json'] },
 	module: {
 		strictExportPresence: true,
@@ -25,18 +28,16 @@ const base = {
 			{
 				test: /\.css$/,
 				use: [
-					{ loader: MiniCssExtract.loader },
+					MiniCssExtract.loader,
 					{
 						loader: 'css-loader',
-						options: { sourceMap: true, minimize: true },
+						options: { sourceMap: true, url: false },
 					},
 				],
 			},
 			{
 				test: /\.(jpe?g)$/,
-				use: [{
-					loader: 'file-loader',
-				}],
+				use: ['file-loader'],
 			},
 		],
 	},
