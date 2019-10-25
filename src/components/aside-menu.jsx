@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function AsideMenu() {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<aside
 			css={{
@@ -10,18 +12,19 @@ export default function AsideMenu() {
 				bottom: 0,
 				left: 0,
 				width: '100vw',
-				transform: 'translateY(-100%)',
+				transform: isOpen ? 'none' : 'translateY(-100%)',
 				transition: 'transform .35s ease-in-out',
 				backgroundColor: 'rgba(5, 5, 5, .8)',
 				'@media (min-width: 768px)': {
 					width: '25rem',
-					transform: 'translateX(-100%)',
+					transform: isOpen ? 'none' : 'translateX(-100%)',
 				},
 			}}
 		>
 			<div css={{ position: 'relative' }}>
 				<button
 					type="button"
+					onClick={() => setIsOpen((prev) => !prev)}
 					css={{
 						position: 'absolute',
 						top: 0,
@@ -34,7 +37,7 @@ export default function AsideMenu() {
 						},
 					}}
 				>
-					Open
+					{isOpen ? 'Closed' : 'Open'}
 				</button>
 			</div>
 		</aside>
